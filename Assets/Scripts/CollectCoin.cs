@@ -11,6 +11,8 @@ public class CollectCoin : MonoBehaviour
         {
             pouch.AddMoney(_value);
             GetComponent<Collider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<AudioSource>().Play();
             Destroy(gameObject, 1);
         }
     }
